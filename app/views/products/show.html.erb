@@ -1,3 +1,6 @@
 <h2><%= @product.title %></h2>
 <p><%= @product.description %></p>
 <span>$<%= @product.price %></span>
+
+<%= link_to 'Editar', edit_product_path(@product.id) %>
+<%= link_to 'Eliminar producto', product_path(@product), data: { turbo_method: :delete }%>
